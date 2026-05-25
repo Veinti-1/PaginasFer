@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Para Mi Amor 💖</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #ffb6d9, #ffd6ec, #fff0f7);
+      overflow: hidden;
+    }
+
+    .container {
+      text-align: center;
+      background: rgba(255, 255, 255, 0.25);
+      backdrop-filter: blur(10px);
+      padding: 50px 40px;
+      border-radius: 30px;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+      width: 90%;
+      max-width: 450px;
+      animation: aparecer 1s ease;
+    }
+
+    h1 {
+      color: #ff3f81;
+      margin-bottom: 15px;
+      font-size: 2.5rem;
+    }
+
+    p {
+      color: #6b3d52;
+      margin-bottom: 35px;
+      font-size: 1.1rem;
+    }
+
+    .botones {
+      display: flex;
+      flex-direction: column;
+      gap: 18px;
+    }
+
+    button {
+      padding: 16px;
+      border: none;
+      border-radius: 18px;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.25s ease;
+      color: white;
+      background: linear-gradient(135deg, #ff4f93, #ff7eb3);
+      box-shadow: 0 5px 15px rgba(255, 79, 147, 0.4);
+    }
+
+    button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 8px 20px rgba(255, 79, 147, 0.6);
+    }
+
+    .corazon {
+      position: absolute;
+      color: rgba(255,255,255,0.7);
+      font-size: 20px;
+      animation: flotar linear infinite;
+    }
+
+    @keyframes flotar {
+      from {
+        transform: translateY(100vh) rotate(0deg);
+        opacity: 0;
+      }
+      to {
+        transform: translateY(-10vh) rotate(360deg);
+        opacity: 1;
+      }
+    }
+
+    @keyframes aparecer {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Para Ti 💖</h1>
+    <p>Tus paginas web preciosa ✨</p>
+
+    <div class="botones">
+      <button onclick="window.location.href='https://veinti-1.github.io/besotesV2/'">
+        🌸 Certificado besitos & besotes
+      </button>
+
+      <button onclick="window.location.href='https://veinti-1.github.io/Valentines/'">
+        💌 Valentines
+      </button>
+
+      <button onclick="window.location.href='https://veinti-1.github.io/quizpreciosa/'">
+        🎀 Quiz Sorpresa
+      </button>
+    </div>
+  </div>
+
+  <script>
+    // Corazones flotando
+    function crearCorazon() {
+      const corazon = document.createElement('div');
+      corazon.classList.add('corazon');
+      corazon.innerHTML = '💖';
+
+      corazon.style.left = Math.random() * 100 + 'vw';
+      corazon.style.animationDuration = (Math.random() * 3 + 4) + 's';
+      corazon.style.fontSize = (Math.random() * 20 + 15) + 'px';
+
+      document.body.appendChild(corazon);
+
+      setTimeout(() => {
+        corazon.remove();
+      }, 7000);
+    }
+
+    setInterval(crearCorazon, 350);
+  </script>
+
+</body>
+</html>
+
