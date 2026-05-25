@@ -23,6 +23,7 @@
     }
 
     .container {
+      position: relative;
       text-align: center;
       background: rgba(255, 255, 255, 0.25);
       backdrop-filter: blur(10px);
@@ -32,6 +33,28 @@
       width: 90%;
       max-width: 450px;
       animation: aparecer 1s ease;
+    }
+
+    .galeria {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 25px;
+      flex-wrap: wrap;
+    }
+
+    .galeria img {
+      width: 95px;
+      height: 95px;
+      object-fit: cover;
+      border-radius: 20px;
+      border: 4px solid rgba(255,255,255,0.7);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.15);
+      transition: 0.3s ease;
+    }
+
+    .galeria img:hover {
+      transform: scale(1.08) rotate(2deg);
     }
 
     h1 {
@@ -103,6 +126,10 @@
 <body>
 
   <div class="container">
+
+    <div class="galeria">
+      <img src="foto1.jpg" alt="Nosotros">
+    </div>
     <h1>Para Ti 💖</h1>
     <p>Tus paginas web preciosa ✨</p>
 
